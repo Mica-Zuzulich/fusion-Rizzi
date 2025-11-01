@@ -3,7 +3,7 @@ import styles from './SobreAngela.module.css'
 import Home_Imagen3 from '../Imagenes/Img/About_Imagen1.png'
 
 export default function SobreAngela() {
-  const { t } = useTranslation() // 🚩 Hook de traducción
+  const { t } = useTranslation() 
 
   return (
     <section className={styles.sobreAngela}>
@@ -19,7 +19,7 @@ export default function SobreAngela() {
           </p>
           <button className={styles.boton}>
             <a 
-              href="/sobre-nosotros" // Ruta correcta para "Sobre Nosotros"
+              href="/sobre-nosotros" 
               style={{ color: 'inherit', textDecoration: 'none' }} 
             >
               {t('sobreAngela.boton')}

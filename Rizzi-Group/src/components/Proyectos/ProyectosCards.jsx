@@ -4,7 +4,6 @@ export default function ProyectosBanners() {
   return (
     <section className={styles.banners}>
       <div className={`${styles.banner} ${styles.miami}`}>
-        {/* Imagen de fondo (Miami) */}
           <div className={styles.contentUno}>
             <h2>Orlando, Florida</h2>
           </div>
@@ -24,7 +23,6 @@ export default function ProyectosBanners() {
       </div>
 
       <div className={`${styles.banner} ${styles.panama}`}>
-                {/* Imagen de fondo (Miami) */}
           <div className={styles.contentUno}>
             <h2>Ciudad de Panamá</h2>
           </div>
@@ -40,7 +38,6 @@ export default function ProyectosBanners() {
       </div>
 
       <div className={`${styles.banner} ${styles.lisboa}`}>
-      {/* Imagen de fondo (Miami) */}
 
       <div className={styles.contentUno}>
           <h2>Lisboa, Portugal</h2>
@@ -57,7 +54,6 @@ export default function ProyectosBanners() {
       </div>
 
       <section className={styles.creaTuFuturo}>
-      {/* Imagen de fondo (Miami) */}
 
     <h2>Creá tu futuro.</h2>
       </section>

@@ -23,12 +23,10 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Botón menú hamburguesa (solo visible en mobile) */}
         <button className={styles.menuBtn} onClick={toggleMenu}>
           ☰
         </button>
 
-        {/* Menú de navegación */}
         <nav
           className={`${styles.nav} ${
             menuAbierto ? styles.navVisible : ""
@@ -74,7 +72,6 @@ export default function Navbar() {
             Contacto
           </NavLink>
 
-          {/* Botón idioma también dentro del menú en mobile */}
           <LanguageButton />
         </nav>
       </div>

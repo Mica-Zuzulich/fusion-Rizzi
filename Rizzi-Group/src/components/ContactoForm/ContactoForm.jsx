@@ -1,10 +1,10 @@
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useTranslation } from "react-i18next"; // 🚩 Importación de useTranslation
+import { useTranslation } from "react-i18next";
 import styles from "./ContactoForm.module.css";
 
 export default function ContactoForm() {
-  const { t } = useTranslation(); // 🚩 Uso del hook de traducción
+  const { t } = useTranslation(); 
 
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
@@ -24,7 +24,7 @@ export default function ContactoForm() {
     setEstado("");
 
     try {
-      // NOTE: Asegúrate de que VITE_BACKEND_URL esté configurado correctamente.
+     
       const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/send`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -87,11 +87,9 @@ export default function ContactoForm() {
         rows={12} 
       />
 
-      {/* 🚩 Implementación de ReCAPTCHA */}
+      {/*  Implementación de ReCAPTCHA */}
       <div className={styles.captchaContainer}>
-        {/* IMPORTANTE: Reemplaza "YOUR_RECAPTCHA_SITE_KEY" con la clave pública 
-          de tu sitio web.
-        */}
+        
         <ReCAPTCHA
           sitekey="YOUR_RECAPTCHA_SITE_KEY" 
           onChange={handleCaptchaChange}

@@ -159,7 +159,7 @@
   width: 150px;
   height: 80px;
   margin: 10px auto 0;
-  background-color: #ddd; /* solo para marcar el lugar del logo */
+  background-color: #ddd; 
   border-radius: 8px;
 }/*# sourceMappingURL=Proyectos.module.css.map */
 
@@ -167,38 +167,36 @@
 /* --- Responsive (Mobile) --- */
 @media (max-width: 768px) {
   
-  /* 1. SECCIÓN INTRO (Header/Banner de Proyectos) */
   .intro {
-    min-height: 50vh; /* Reducir altura para no ocupar toda la pantalla */
-    background-position: center center; /* Centrar la imagen mejor en mobile */
+    min-height: 50vh; 
+    background-position: center center; 
   }
 
   .intro h1 {
-    font-size: 2rem; /* Reducir el tamaño del título principal */
+    font-size: 2rem; 
     margin-bottom: 2rem;
-    padding: 0 10px; /* Pequeño padding para asegurar que no toque los bordes */
+    padding: 0 10px; 
   }
 
   .intro p {
-    max-width: 90%; /* Asegurar que el párrafo ocupe casi todo el ancho */
-    font-size: 1rem; /* Reducir el tamaño de la fuente del párrafo */
+    max-width: 90%; 
+    font-size: 1rem;
   }
 
-  /* 2. SECCIÓN BANNERS (Listado de Proyectos: Miami, Lisboa, etc.) */
   .banners {
-    gap: 30px; /* Reducir el espacio entre los banners */
+    gap: 30px; 
     margin-top: 20px;
   }
   
   .banner {
-    height: 50vh; /* Reducir un poco la altura de cada banner */
-    width: 95%; /* Permitir que ocupe más ancho para aprovechar el espacio */
-    border-radius: 20px; /* Reducir el radio del borde para que sea menos prominente */
+    height: 50vh; 
+    width: 95%; 
+    border-radius: 20px; 
   }
 
   /* Contenido inicial (cuando el ratón no está encima) */
   .contentUno h2 {
-    font-size: 2rem; /* Reducir el título de los banners */
+    font-size: 2rem;
   }
 
   /* Contenido al hacer hover (se muestra en mobile al tocar/activar) */
@@ -206,25 +204,24 @@
     padding: 15px 20px;
   }
   .content h2 {
-    font-size: 1.8rem; /* Reducir el título del contenido expandido */
+    font-size: 1.8rem; 
   }
   .content p {
-    font-size: 1rem; /* Reducir el texto de descripción */
+    font-size: 1rem; 
     margin-bottom: 1.5rem;
   }
   .content button {
-    max-width: 80vw; /* Permitir que el botón sea más ancho */
+    max-width: 80vw; 
     font-size: 1rem;
-    padding: 15px 20px; /* Reducir el padding del botón */
+    padding: 15px 20px;
   }
 
-  /* 3. SECCIÓN CREA TU FUTURO */
   .creaTuFuturo {
-    height: 30vh; /* Reducir la altura de esta sección */
+    height: 30vh; 
   }
   .creaTuFuturo h2 {
-    font-size: 2rem; /* Reducir el tamaño del título */
+    font-size: 2rem;
     text-align: center;
-    padding: 0 10px; /* Asegurar que no se desborde */
+    padding: 0 10px; 
   }
 }

@@ -24,19 +24,19 @@
 /* Contenedor de las tarjetas */
 .grid {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  flex-wrap: wrap; /* Permite que bajen en móviles */
-  gap: 3rem; /* Espacio entre tarjetas */
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 3rem; 
 }
 
 /* Cada tarjeta */
 .card {
-  flex: 1 1 200px; /* Crece hasta llenar el espacio, mínimo 200px */
-  max-width: 320px; /* Ancho máximo de cada tarjeta */
-  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Fondo con leve degradado tipo relieve */
+  flex: 1 1 200px; 
+  max-width: 320px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); 
   border-radius: 16px;
   padding: 2rem 1.5rem;
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15), -4px -4px 12px rgba(255, 255, 255, 0.6); /* efecto relieve */
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15), -4px -4px 12px rgba(255, 255, 255, 0.6); 
   text-align: center;
   transition: all 0.3s ease;
   display: flex;
@@ -44,7 +44,6 @@
   align-items: center;
   justify-content: space-around;
 
-  /* Animación al pasar el mouse */
   &:hover {
     transform: translateY(-6px);
     box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.2), -6px -6px 16px rgba(255, 255, 255, 0.7);
@@ -64,16 +63,14 @@
   }
 }
 
-/* Imagen o ícono dentro de la card */
 .cardImg {
-  width: 40%; /* Tamaño más grande para ícono */
+  width: 40%; 
   object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 8, 53, 0.2)); /* sombra sutil al ícono */
+  filter: drop-shadow(0 2px 4px rgba(0, 8, 53, 0.2)); 
   transition: transform 0.3s ease;
   margin-bottom: 10px;
 }
 
-/* Título dentro de la tarjeta */
 .card h3 {
   font-size: 1.3rem;
   color: #00123a;
@@ -83,7 +80,6 @@
   text-transform: uppercase;
 }
 
-/* Texto opcional debajo */
 .card p {
   font-size: 1.2rem;
   color: #00123a;
@@ -93,7 +89,6 @@
   margin-bottom: 1.2rem;
 }
 
-/* Efecto hover opcional */
 .card:hover {
   transform: translateY(-5px);
 }

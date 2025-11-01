@@ -23,19 +23,19 @@
 /* Contenedor de las tarjetas */
 .grid {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  flex-wrap: wrap; /* Permite que bajen en móviles */
-  gap: 3rem; /* Espacio entre tarjetas */
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 3rem;
 }
 
 /* Cada tarjeta */
 .card {
-  flex: 1 1 200px; /* Crece hasta llenar el espacio, mínimo 200px */
-  max-width: 320px; /* Ancho máximo de cada tarjeta */
-  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Fondo con leve degradado tipo relieve */
+  flex: 1 1 200px; 
+  max-width: 320px; 
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
   border-radius: 16px;
   padding: 2rem 1.5rem;
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15), -4px -4px 12px rgba(255, 255, 255, 0.6); /* efecto relieve */
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15), -4px -4px 12px rgba(255, 255, 255, 0.6); 
   text-align: center;
   transition: all 0.3s ease;
   display: flex;
@@ -62,10 +62,10 @@
 
 /* Imagen o ícono dentro de la card */
 .cardImg {
-  width: 40%; /* Tamaño más grande para ícono */
+  width: 40%; 
   -o-object-fit: contain;
      object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 8, 53, 0.2)); /* sombra sutil al ícono */
+  filter: drop-shadow(0 2px 4px rgba(0, 8, 53, 0.2));
   transition: transform 0.3s ease;
   margin-bottom: 10px;
 }
@@ -80,7 +80,6 @@
   text-transform: uppercase;
 }
 
-/* Texto opcional debajo */
 .card p {
   font-size: 1.2rem;
   color: #00123a;
@@ -90,7 +89,6 @@
   margin-bottom: 1.2rem;
 }
 
-/* Efecto hover opcional */
 .card:hover {
   transform: translateY(-5px);
 }
@@ -107,56 +105,50 @@
   
   /* Contenedor Principal */
   .servicios {
-    padding: 2rem 10px; /* Reducir padding horizontal */
-    width: 95%; /* Ocupar un poco más de ancho de pantalla */
-    margin: 40px auto; /* Reducir margen vertical */
+    padding: 2rem 10px; 
+    width: 95%; 
+    margin: 40px auto; 
   }
 
   /* Título de la Sección */
   .servicios h2 {
-    font-size: 2.5rem; /* Reducir el tamaño del título */
+    font-size: 2.5rem; 
     margin-bottom: 1.5rem;
   }
 
   /* Contenedor de Tarjetas */
   .grid {
-    flex-direction: column; /* Apilar las tarjetas */
+    flex-direction: column; 
     align-items: center;
-    gap: 2rem; /* Reducir un poco el espacio entre tarjetas */
+    gap: 2rem;
   }
 
   /* Cada Tarjeta (Card) */
   .card {
-    /* Permitir que la tarjeta ocupe el ancho máximo sin restricciones de flex */
     flex: 1 1 100%; 
-    max-width: 100%; /* Permitir que ocupe todo el ancho disponible */
-    margin-bottom: 0; /* Eliminar el margen inferior si ya tenemos gap */
-    padding: 1.5rem 1rem; /* Reducir el padding interno */
+    max-width: 100%;
+    margin-bottom: 0;
+    padding: 1.5rem 1rem; 
     
-    /* Deshabilitar la animación de scale en dispositivos táctiles */
     transition: none; 
   }
   
   .card:hover {
-      /* Quitar la animación de scale y el transform en mobile/touch */
       transform: none; 
       box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15), -4px -4px 12px rgba(255, 255, 255, 0.6); 
   }
   
-  /* Imagen/Ícono de la Card */
   .cardImg {
-      width: 30%; /* Reducir un poco el tamaño del ícono */
+      width: 30%; 
   }
 
-  /* Título de la Card */
   .card h3 {
-      font-size: 1.2rem; /* Reducir tamaño del título */
+      font-size: 1.2rem; 
       margin-bottom: 0.8rem;
   }
 
-  /* Texto de Párrafo de la Card */
   .card p {
-      font-size: 1rem; /* Reducir tamaño del texto */
+      font-size: 1rem; 
       max-width: 100%;
       margin-bottom: 1rem;
   }

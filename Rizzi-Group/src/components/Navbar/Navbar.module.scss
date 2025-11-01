@@ -16,7 +16,7 @@
 /* Franja superior */
 .topBar {
   display: flex;
-  justify-content: flex-end; /* 👈 Esto alinea los íconos a la derecha */
+  justify-content: flex-end; 
   padding: 6px 25px;
   border-bottom: 1px solid #eee;
 }
@@ -74,14 +74,14 @@
     font-size: 1.2rem;
     font-weight: bold;
     background-image: linear-gradient(  #c59668,   #c59668) !important; 
-    background-position: 50% 100%;     /* empieza centrado abajo */
+    background-position: 50% 100%;     
     background-repeat: no-repeat;
-    background-size: 0% 2px;           /* línea invisible al inicio */
-    transition: background-size 0.6s ease; /* animación suave */
+    background-size: 0% 2px;         
+    transition: background-size 0.6s ease;
     }
 
     a:hover {
-    background-size: 100% 2px;         /* línea se extiende desde el centro */
+    background-size: 100% 2px;       
 
     }
 

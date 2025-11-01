@@ -76,52 +76,45 @@
   
   /* Contenedor Principal de la Sección */
   .testimoniosSection {
-    padding: 60px 10px; /* Reducir padding vertical y horizontal */
+    padding: 60px 10px; 
   }
 
   /* Título de la Sección */
   .testimoniosSection h2 {
-    font-size: 2.2rem; /* Reducir el título principal */
+    font-size: 2.2rem; 
     margin-bottom: 20px;
   }
 
   /* Contenedor de la Tarjeta y las Flechas */
   .testimoniosSection .testimonioCard {
-    /* Cambiar a apilamiento vertical */
     flex-direction: column; 
-    gap: 20px; /* Reducir el espacio entre elementos */
-    margin: 20px auto; /* Reducir margen */
-    max-width: 95%; /* Asegurar que no exceda el ancho de la pantalla */
+    gap: 20px; 
+    margin: 20px auto;
+    max-width: 95%;
   }
 
   /* Flechas de Navegación */
   .testimoniosSection .flecha {
-    /* Opcional: ocultar flechas si el carrusel es táctil o si se mueven */
-    /* Si las quieres mantener, puedes ponerlas arriba o abajo */
+  
     display: none; 
   }
   
-  /* Contenido del Testimonio */
   .testimoniosSection .testimonioContenido {
-    padding: 30px 20px; /* Reducir el padding interno */
+    padding: 30px 20px; 
     border-radius: 10px; 
-    /* Eliminar ancho fijo si lo tuviera, aunque ya usa width: 100% */
   }
 
-  /* Ícono de Estrellas */
   .testimoniosSection .testimonioContenido .Icono_Estrellas {
-    width: 200px; /* Reducir el tamaño de las estrellas */
-    top: -30px; /* Ajustar posición vertical */
+    width: 200px; 
+    top: -30px;
   }
   
-  /* Texto del Testimonio */
   .testimoniosSection .testimonioContenido p {
-    font-size: 1.1rem; /* Reducir la fuente del texto principal */
+    font-size: 1.1rem;
     line-height: 1.6rem;
     margin-bottom: 10px;
   }
 
-  /* Nombre del Cliente */
   .testimoniosSection .testimonioContenido h4 {
     font-size: 1.2rem;
   }

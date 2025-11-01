@@ -1,11 +1,9 @@
 import styles from './PorqueElegirnos.module.css'
 import Home_IconoTick from '../Imagenes/Íconos/Home_IconoTick.png'
-import { useTranslation } from 'react-i18next' // Importar useTranslation
-
+import { useTranslation } from 'react-i18next' 
 export default function PorqueElegirnos() {
-  const { t } = useTranslation() // Usar el hook de traducción
+  const { t } = useTranslation()
 
-  // Definir la lista de razones a traducir y mapear
   const razones = [
     t('porqueElegirnos.razon1'),
     t('porqueElegirnos.razon2'),
@@ -13,7 +11,6 @@ export default function PorqueElegirnos() {
     t('porqueElegirnos.razon4') 
   ]
   
-  // Filtrar para evitar que se muestren elementos vacíos si no se definen todas las razones
   const listaRazones = razones.filter(razon => razon); 
 
   return (
@@ -24,7 +21,6 @@ export default function PorqueElegirnos() {
           <h2>{t('porqueElegirnos.titulo')}</h2>
           
           <p>
-           {/* La etiqueta <p> no debe contener <ul>, la lista debe ir directamente */}
            <ul>
             {listaRazones.map((razon, index) => (
               <li key={index}>

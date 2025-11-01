@@ -10,28 +10,24 @@ export default function Servicios() {
       <h2>Nuestros Servicios</h2>
       <div className={styles.grid}>
         <div className={styles.card}>
-          {/* Usamos LogoPremio1 como placeholder temporal */}
           <img src={Icono1} alt="Propiedades" className={styles.cardImg} />
           <h3>Propiedades</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
                     <button></button>
         </div>
         <div className={styles.card}>
-          {/* Usamos LogoPremio1 como placeholder temporal */}
           <img src={Icono2} alt="Inversiones Internacionales" className={styles.cardImg} />
           <h3>Inversiones Internacionales</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
                     <button></button>
         </div>
         <div className={styles.card}>
-          {/* Usamos LogoPremio1 como placeholder temporal */}
           <img src={Icono3} alt="Propiedades en Miami" className={styles.cardImg} />
           <h3>Asesoramiento Legal</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
                     <button></button>
         </div>
         <div className={styles.card}>
-          {/* Usamos LogoPremio1 como placeholder temporal */}
           <img src={Icono4} alt="Inversión Inmobiliaria" className={styles.cardImg} />
           <h3>Prestamos inmobiliarios</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>

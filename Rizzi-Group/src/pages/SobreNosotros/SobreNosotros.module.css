@@ -88,7 +88,6 @@
   margin-bottom: 3rem;
 }
 
-/* Botón */
 .perfilAngela .botonZoom {
   margin-top: 25px;
   background-color: #00123a;
@@ -261,10 +260,9 @@
   font-size: 0.9rem;
   color: #555;
 } 
-/* Estilo para el contenedor principal de la sección */
 .certificacionesSection {
   padding: 40px 20px;
-  background-color: #f8f8f8; /* Color de fondo suave */
+  background-color: #f8f8f8; 
   text-align: center;
 }
 
@@ -273,34 +271,30 @@
   margin: 0 auto;
 }
 
-/* Contenedor que junta la cuadrícula de logos y el texto */
 .certificacionesGrid {
   display: flex;
-  flex-direction: column; /* Por defecto, apilados en móvil */
-  gap: 40px; /* Espacio entre los logos y el texto */
+  flex-direction: column; 
+  gap: 40px; 
   align-items: center;
   margin-top: 30px;
 }
 
-/* Contenedor de los Logos */
 .certificacionesLogos {
   display: grid;
-  /* Crea una cuadrícula de 3 columnas en la mayoría de los casos */
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
-  width: 100%; /* Ocupa todo el ancho disponible */
-  max-width: 700px; /* Limita el ancho del grupo de logos */
+  width: 100%; 
+  max-width: 700px;
   margin: 0 auto;
 }
 
-/* Estilo para las imágenes de los logos (para que no se salgan) */
 .certificacionesLogos img {
   width: 100%;
   height: auto;
-  max-width: 150px; /* Tamaño máximo para cada logo */
+  max-width: 150px; 
   -o-object-fit: contain;
      object-fit: contain;
-  margin: 0 auto; /* Centrar las imágenes si están en un espacio más grande */
+  margin: 0 auto;
   transition: transform 0.3s ease;
 }
 
@@ -308,23 +302,21 @@
   transform: scale(1.05);
 }
 
-/* Media Query para Escritorio (Desktop) */
 @media (min-width: 900px) {
   .certificacionesGrid {
-    flex-direction: row; /* En escritorio, pónlos en una fila horizontal */
+    flex-direction: row; 
     text-align: left;
     gap: 80px;
   }
   .certificacionesLogos {
-    flex: 2; /* Que los logos ocupen más espacio que el texto */
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+    flex: 2; 
+    grid-template-columns: repeat(4, 1fr); 
   }
   .textoCertificaciones {
-    flex: 1; /* El texto ocupa menos espacio */
+    flex: 1; 
     text-align: left;
   }
 }
-/* Estilo para la lista de texto de certificaciones */
 .textoCertificaciones ul {
   list-style-type: none;
   padding-left: 0;
@@ -334,14 +326,13 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 8px;
-  padding-left: 20px; /* Espacio para un ícono o viñeta custom si lo añades */
+  padding-left: 20px; 
   position: relative;
 }
 
-/* Puedes añadir un estilo de viñeta personalizado si quieres */
 .textoCertificaciones li::before {
-  content: "★"; /* O puedes usar un ícono como '✓' */
-  color: #38a169; /* Un color verde para destacar */
+  content: "★";
+  color: #38a169; 
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -350,12 +341,9 @@
   left: 0;
 }
 
-/* -------------------------------------- */
-/* ESTILOS DE LA SECCIÓN DE PREMIOS Y HONORES (NUEVOS ESTILOS) */
-/* -------------------------------------- */
 .premiosHonoresSection {
   padding: 60px 20px;
-  background-color: #ffffff; /* Fondo verde muy claro para la sección */
+  background-color: #ffffff; 
   text-align: center;
 }
 
@@ -365,48 +353,35 @@
   padding: 2rem;
 }
 
-/* 🚩 EL CONTENEDOR PRINCIPAL AHORA TIENE EL BORDE Y EL FONDO */
 .honoresGrid {
-  /* Quité max-width para que el borde se extienda un poco más */
-  /* Lo hago flex para centrar mejor el contenido, aunque internamente use grid */
   display: flex;
-  /* IMPORTANTE: para que el contenido comience desde la izquierda y la animación se note */
   justify-content: flex-start;
   margin: 0 auto;
-  padding: 30px 0; /* Padding interno para que el contenido no pegue en el borde */
-  /* ESTILOS DE BORDE ÚNICO */
-  background-color: white; /* Fondo blanco */
-  border: 2px solid #00123a; /* Borde gris muy suave */
-  border-radius: 12px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave para levantarla */
+  padding: 30px 0;
+  background-color: white; 
+  border: 2px solid #00123a; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   position: relative;
-  /* Evita que el contenido colapse al convertir el interno en flex */
   align-items: center;
 }
 
-/* ---------- CONVERTIMOS LA GRID A UN TRACK HORIZONTAL PARA ANIMAR ---------- */
-/* Mantengo el nombre .gridContainerInner pero lo pongo en fila */
 .gridContainerInner {
-  display: flex; /* fila continua */
-  flex-wrap: nowrap; /* SIN wrap: todos los honorItem en una línea */
+  display: flex; 
+  flex-wrap: nowrap; 
   width: -moz-max-content;
-  width: max-content; /* ancho real del contenido (necesario para la animación) */
-  /* centrado visual lo controla el padre .honoresGrid si lo deseas */
+  width: max-content; 
   align-items: center;
-  /* animación continua: recorrer la mitad del ancho total (porque duplicaste los items) */
   animation: honores-scroll 30s linear infinite;
-  /* suaviza y evita saltos en algunos navegadores */
   backface-visibility: hidden;
   transform: translateZ(0);
 }
 
-/* pausar en hover (opcional) */
 .honoresGrid:hover .gridContainerInner {
   animation-play-state: paused;
 }
 
-/* ---------- ITEM STYLES (igual que tenías) ---------- */
 .honorItem {
   background-color: transparent;
   padding: 10px 5px;
@@ -415,11 +390,9 @@
   border-top: none;
   transition: none;
   transform: none;
-  /* Para que el ítem no colapse y pueda tomar ancho fijo según breakpoint */
-  flex: 0 0 auto; /* no crecer, no encoger, ancho automático por CSS abajo */
+  flex: 0 0 auto; 
 }
 
-/* Mantengo tus estilos internos */
 .honorItem:hover {
   transform: none;
   box-shadow: none;
@@ -448,16 +421,10 @@
   padding: 0 5px;
 }
 
-/* ---------- RESPONSIVE: simulamos 2 / 3 / 6 columnas fijando anchos de ítem ---------- */
-/* Móvil: 2 columnas (cada item ocupará ~50% del ancho visible de la grid "virtual") */
 .gridContainerInner .honorItem {
-  /* Cada item tendrá un ancho aproximado según "2 columnas" en pantalla pequeña.
-     Como el contenedor es width:max-content y se desplaza, usamos un ancho que
-     simule 2 columnas dentro del espacio visible. Ajusta el % según tus gaps. */
-  width: calc((100% - 20px) / 2); /* valor de referencia si la grid original era 100% */
+  width: calc((100% - 20px) / 2); 
 }
 
-/* Tablet: 3 columnas */
 @media (min-width: 640px) {
   .gridContainerInner {
     gap: 20px 15px;
@@ -466,17 +433,14 @@
     width: calc((100% - 30px) / 3);
   }
 }
-/* Escritorio: 6 columnas */
 @media (min-width: 1024px) {
   .gridContainerInner {
     gap: 20px 20px;
   }
   .gridContainerInner .honorItem {
-    width: calc((100% - 100px) / 6); /* ajustá el -100px según el gap total que quieras simular */
+    width: calc((100% - 100px) / 6); 
   }
 }
-/* ---------- ANIMACIÓN ---------- */
-/* Mueve la track hacia la izquierda hasta -50% (funciona con duplicado de items) */
 @keyframes honores-scroll {
   from {
     transform: translateX(0);
@@ -486,9 +450,7 @@
   }
 }/*# sourceMappingURL=SobreNosotros.module.css.map */
 
-/* 📱📱 MEDIA QUERIES ADICIONALES */
 
-/* Tablet (hasta 1024px) */
 @media (max-width: 1024px) {
   .bannerSobre h1 {
     font-size: 2.8rem;
@@ -522,7 +484,6 @@
   }
 }
 
-/* Móviles grandes (hasta 768px) */
 @media (max-width: 768px) {
   .bannerSobre {
     height: 60vh;
@@ -570,7 +531,6 @@
   }
 }
 
-/* Celulares pequeños (hasta 480px) */
 @media (max-width: 480px) {
   .bannerSobre {
     height: 50vh;

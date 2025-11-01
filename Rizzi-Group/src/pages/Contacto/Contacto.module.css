@@ -88,72 +88,61 @@
 /* --- Responsive (Mobile) --- */
 @media (max-width: 768px) {
   
-  /* Contenedor Principal de la Sección */
   .contacto {
-    padding: 3rem 1rem; /* Reducir padding horizontal */
+    padding: 3rem 1rem; 
   }
 
-  /* Título Principal */
   .contacto h2 {
-    font-size: 2.5rem; /* Reducir el tamaño del título principal */
-    text-align: center; /* Centrar el título en móvil */
+    font-size: 2.5rem; 
+    text-align: center; 
   }
 
-  /* Subtítulo */
   .contacto h3 {
-    font-size: 1.4rem; /* Reducir el subtítulo */
+    font-size: 1.4rem;
     margin-top: 0.5rem;
   }
   
-  /* Certificación/Texto de info */
   .contacto .certi {
-    font-size: 1.4rem; /* Reducir el texto de certificación */
-    margin-bottom: 3rem; /* Reducir el margen inferior */
+    font-size: 1.4rem; 
+    margin-bottom: 3rem;
   }
 
-  /* Contenedor Flex de Formulario e Info */
   .contacto .formContainer {
-    flex-direction: column; /* Apilar las columnas verticalmente */
-    align-items: center; /* Centrar el contenido apilado */
+    flex-direction: column;
+    align-items: center;
   }
   
-  /* Sección de Información de Contacto */
   .contacto .info {
-    /* Ocupar todo el ancho y eliminar padding horizontal excesivo */
     width: 100%; 
     padding-left: 0; 
-    text-align: center; /* Centrar el contenido de info */
-    margin-bottom: 2rem; /* Añadir espacio debajo de la sección de info */
+    text-align: center; 
+    margin-bottom: 2rem;
   }
   
-  /* Ajuste del Logo dentro de la Sección Info */
   .contacto .info .logo {
-    justify-content: center; /* Centrar el logo */
-    margin: 0 auto; /* Eliminar margen negativo y centrar */
-    min-width: unset; /* Permitir que el ancho se ajuste */
+    justify-content: center; 
+    margin: 0 auto;
+    min-width: unset; 
   }
   .contacto .info .logo img {
-    width: 40%; /* Reducir el ancho del logo */
+    width: 40%; 
     max-width: 150px;
   }
   
-  /* Contenedor de Datos (Dirección, Teléfono) */
   .contacto .datos {
-    display: flex; /* Cambiar a flex para centrar mejor o forzar columna si es necesario */
+    display: flex; 
     flex-direction: column;
     align-items: center;
   }
 
-  /* Párrafos de Datos y Texto General */
   .contacto p {
-    font-size: 1rem; /* Reducir el tamaño de la fuente */
+    font-size: 1rem; 
     padding-top: 5px;
   }
   
-  /* Botones */
   .contacto button {
-    width: 100%; /* Permitir que el botón ocupe todo el ancho */
-    max-width: 200px; /* Limitar el ancho máximo si es necesario */
+    width: 100%;
+    max-width: 200px; 
     font-size: 1.1rem;
     padding: 1rem;
   }

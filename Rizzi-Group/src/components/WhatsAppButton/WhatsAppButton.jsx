@@ -9,7 +9,6 @@ export default function WhatsAppButton() {
 
   return (
     <div className="whatsapp-floating">
-      {/* Botón principal */}
       <button className="whatsapp-main-btn" onClick={toggleOptions}>
         <FaWhatsapp size={28} />
       </button>

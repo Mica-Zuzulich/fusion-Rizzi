@@ -27,7 +27,6 @@ import LogoPremio5 from '../../components/Imagenes/Logos/Logo_Premios5.png';
 import LogoPremio6 from '../../components/Imagenes/Logos/Logo_Premios6.png'; 
 
 export default function SobreNosotros() {
-  // 🧠 Lista de testimonios
   const testimonios = [
     {
       texto:
@@ -46,7 +45,6 @@ export default function SobreNosotros() {
     },
   ]
 
-  // Estado para manejar el testimonio actual
   const [indice, setIndice] = useState(0)
 
   const handleNext = () => {
@@ -59,7 +57,6 @@ export default function SobreNosotros() {
 
   return (
     <>
-      {/* Banner inicial */}
       <section className={styles.bannerSobre}>
         <h1>Nuestro Equipo <br />de trabajo.</h1>
         <p>
@@ -218,7 +215,6 @@ export default function SobreNosotros() {
 </section>
 
 
-     {/* 🏆 Premios y Honores */}
 <section className={styles.premiosHonoresSection}>
   <div className={styles.container}>
     <h2>Premios y Honores</h2>
@@ -291,7 +287,6 @@ export default function SobreNosotros() {
 
      <Testimonios />
 
-      {/* Contacto al final */}
       <Contacto />
 
     </>
