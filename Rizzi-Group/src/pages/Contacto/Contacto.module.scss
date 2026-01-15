@@ -12,16 +12,28 @@
   background-color: #f2f4f4;
   width: 100%;
 
-    .contactoMargenes{
-        width: 94%;
+  .contactoMargenes {
+    width: 94%;
+    max-width: 1200px;
     margin: auto;
+  }
 
-    }
+  h1 {
+    font-size: 2.5rem;
+    color: #0a1944;
+    margin-bottom: 1rem;
+  }
 
-    h2{
-      text-align: left;
-      font-size: 4rem;
-      color: #0a1944;
+  > p {
+    font-size: 1.2rem;
+    color: #0a1944;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    text-align: left;
+    font-size: 4rem;
+    color: #0a1944;
   }
 
   button {
@@ -33,15 +45,15 @@
     cursor: pointer;
     width: 140px;
     font-size: 1.3rem;
-    font-weight:bold;
+    font-weight: bold;
+
+    &:hover {
+      opacity: 0.9;
+      background-color: burlywood;
+    }
   }
 
-  button:hover {
-    opacity: 0.9;
-    background-color: burlywood;
-  }
-
-  h3{
+  h3 {
     display: inline-block;
     padding: 0.2rem 0;
     margin-top: 1rem;
@@ -49,57 +61,144 @@
     color: #0a1944;
     border-bottom: solid 3px #c59668;
   }
-.certi{
-  margin-top: 10px;
-  font-size: 1.7rem;
-  margin-bottom: 6rem;
+
+  .certi {
+    margin-top: 10px;
+    font-size: 1.7rem;
+    margin-bottom: 6rem;
+  }
+
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding-left: 2rem;
+    border-radius: 10px;
+    text-align: left;
+
+    .logo {
+      border-radius: 6px;
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      overflow: hidden;
+      min-width: 200px;
+      margin-left: -2rem;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  .datos {
+    display: grid;
+    align-items: end;
+
+    p {
+      font-size: 1.2rem;
+      padding-top: 10px;
+    }
+  }
+
+  p {
+    font-weight: 500;
+  }
 }
 
+/* --- Responsive (Tablet) --- */
+@media (max-width: 992px) {
+  .contacto {
+    .formContainer {
+      flex-direction: column;
+      align-items: center;
+    }
 
-.formContainer {
-    //background-color: aquamarine;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.info {
-  //background: white;
-  width: 50%;
-  padding-left: 2rem;
-  border-radius: 10px;
-  //box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: left;
-
-  .logo {
-  border-radius: 6px;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  overflow: hidden;
-  min-width: 200px;
-  margin-left: -2rem;
-  
-    img{
-      width: 50%;
+    .info {
+      max-width: 100%;
+      width: 100%;
     }
   }
 }
 
-.datos{
-  //background-color: burlywood;
-  display: grid;
-  align-items: end;
-  p{
-    font-size: 1.2rem;
-    padding-top: 10px;
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+  .contacto {
+    padding: 3rem 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    > p {
+      font-size: 1rem;
+      padding: 0 0.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .certi {
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+    }
+
+    .formContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .info {
+      width: 100%;
+      padding-left: 0;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      .logo {
+        justify-content: center;
+        margin: 0 auto;
+        min-width: unset;
+
+        img {
+          width: 60%;
+          max-width: 150px;
+        }
+      }
+    }
+
+    .datos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        font-size: 1rem;
+        padding-top: 5px;
+      }
+    }
+
+    button {
+      width: 100%;
+      max-width: 200px;
+      font-size: 1.1rem;
+      padding: 1rem;
+    }
   }
 }
-
-p{
-  font-weight: 500;
-}
-}
-
