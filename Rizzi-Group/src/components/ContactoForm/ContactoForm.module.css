@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -9,28 +10,115 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 50%;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  width: 100%;
   padding: 0;
   border-radius: 10px;
 }
 
-input, textarea {
+input,
+textarea {
   all: unset;
-  padding: 0.5rem;
+  padding: 1em;
   border-radius: 50px;
   font-size: 1.3rem;
-  padding: 1em;
   text-align: left;
   color: #141e2e;
   background-color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-::-moz-placeholder {
-  color: #0a1944;
+textarea {
+  border-radius: 25px;
+  resize: vertical;
+  min-height: 150px;
+}
+
+label {
+  text-align: left;
   font-weight: 500;
+  color: #0a1944;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
 }
 
 ::placeholder {
   color: #0a1944;
   font-weight: 500;
-}/*# sourceMappingURL=ContactoForm.module.css.map */
+}
+
+.captchaContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+button {
+  background: #141e2e;
+  color: white;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+  background-color: burlywood;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.estadoMensaje {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: rgba(10, 25, 68, 0.1);
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+  .form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1rem;
+    padding: 0.8em;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  .captchaContainer {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .captchaContainer {
+    transform: scale(0.75);
+  }
+}
