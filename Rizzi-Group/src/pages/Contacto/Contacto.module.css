@@ -11,13 +11,14 @@
   width: 100%;
   background-color: #f2f4f4;
   overflow-x: hidden;
+  padding-top: 4rem; 
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 0 1rem 2rem 1rem;
 }
 
 .contacto h1 {

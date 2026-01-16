@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -6,8 +7,8 @@
 }
 
 .sobreAngela {
-  background-color: #fff;
-  background-color: #141e2e;
+  background: linear-gradient(to bottom, #141e2e 0%, #141e2e 85%, #f2f4f4 100%);
+  padding-bottom: 8rem;
 }
 
 .contenedor {
@@ -76,14 +77,78 @@
   cursor: pointer;
   transition: background 0.3s;
   background-color: #141e2e;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .boton:hover {
   background-color: #c2865a;
-} 
+  border-color: #c2865a;
+}
+
 /* Responsive */
+
 @media (max-width: 768px) {
+  .sobreAngela {
+    padding-bottom: 3rem;
+  }
+
   .contenedor {
     flex-direction: column;
+    padding-top: 3rem;
+    width: 95%;
   }
-}/*# sourceMappingURL=SobreAngela.module.css.map */
+
+  .imagen {
+    width: 100%;
+  }
+
+  .imagen img {
+    max-width: 90%;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  .texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .texto p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .boton {
+    font-size: 1.1rem;
+    padding: 15px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobreAngela {
+    padding-bottom: 2rem;
+  }
+
+  .contenedor {
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  .texto h2 {
+    font-size: 2rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+
+  .boton {
+    font-size: 1rem;
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 250px;
+  }
+}
