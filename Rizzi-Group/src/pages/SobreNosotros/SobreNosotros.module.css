@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -53,18 +54,19 @@
   flex: 1 1 300px;
   text-align: center;
 }
+
 .perfilAngela .imagen img {
   max-width: 80%;
   height: auto;
   border-radius: 12px;
 }
 
-/* Texto */
 .container .texto {
   flex: 1 1 400px;
   color: #00123a;
   text-align: left;
 }
+
 .container .texto h3 {
   font-size: 2rem;
   color: #c59668;
@@ -100,6 +102,8 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .perfilAngela .botonZoom:hover {
@@ -159,15 +163,6 @@
   color: #f5f5f5;
 }
 
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .visionMisionUnica .textos {
-    flex-direction: column;
-  }
-  .visionMisionUnica .textoBloque {
-    margin-bottom: 20px;
-  }
-}
 .certificacionesSection {
   width: 100%;
   background-color: #f7f7f7;
@@ -175,6 +170,7 @@
   display: flex;
   justify-content: center;
 }
+
 .certificacionesSection h2 {
   font-size: 3.4rem;
   color: #00123a;
@@ -199,7 +195,6 @@
 .certificacionesSection .iconos img {
   width: 50px;
   height: 50px;
-  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -219,25 +214,6 @@
   line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .certificacionesSection .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .certificacionesSection .iconos {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .certificacionesSection .iconos img {
-    margin: 10px;
-  }
-  .certificacionesSection .textoCertificaciones {
-    text-align: center;
-    margin-top: 20px;
-  }
-}
 .premiosHonoresSection {
   background-color: #ffffff;
   padding: 60px 20px;
@@ -259,10 +235,11 @@
 .logoItem p {
   font-size: 0.9rem;
   color: #555;
-} 
+}
+
 .certificacionesSection {
   padding: 40px 20px;
-  background-color: #f8f8f8; 
+  background-color: #f8f8f8;
   text-align: center;
 }
 
@@ -273,8 +250,8 @@
 
 .certificacionesGrid {
   display: flex;
-  flex-direction: column; 
-  gap: 40px; 
+  flex-direction: column;
+  gap: 40px;
   align-items: center;
   margin-top: 30px;
 }
@@ -283,7 +260,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
-  width: 100%; 
+  width: 100%;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -291,9 +268,8 @@
 .certificacionesLogos img {
   width: 100%;
   height: auto;
-  max-width: 150px; 
-  -o-object-fit: contain;
-     object-fit: contain;
+  max-width: 150px;
+  object-fit: contain;
   margin: 0 auto;
   transition: transform 0.3s ease;
 }
@@ -302,21 +278,6 @@
   transform: scale(1.05);
 }
 
-@media (min-width: 900px) {
-  .certificacionesGrid {
-    flex-direction: row; 
-    text-align: left;
-    gap: 80px;
-  }
-  .certificacionesLogos {
-    flex: 2; 
-    grid-template-columns: repeat(4, 1fr); 
-  }
-  .textoCertificaciones {
-    flex: 1; 
-    text-align: left;
-  }
-}
 .textoCertificaciones ul {
   list-style-type: none;
   padding-left: 0;
@@ -326,13 +287,13 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 8px;
-  padding-left: 20px; 
+  padding-left: 20px;
   position: relative;
 }
 
 .textoCertificaciones li::before {
   content: "★";
-  color: #38a169; 
+  color: #38a169;
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -343,7 +304,7 @@
 
 .premiosHonoresSection {
   padding: 60px 20px;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -358,9 +319,9 @@
   justify-content: flex-start;
   margin: 0 auto;
   padding: 30px 0;
-  background-color: white; 
-  border: 2px solid #00123a; 
-  border-radius: 12px; 
+  background-color: white;
+  border: 2px solid #00123a;
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   position: relative;
@@ -368,10 +329,9 @@
 }
 
 .gridContainerInner {
-  display: flex; 
-  flex-wrap: nowrap; 
-  width: -moz-max-content;
-  width: max-content; 
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
   align-items: center;
   animation: honores-scroll 30s linear infinite;
   backface-visibility: hidden;
@@ -390,7 +350,7 @@
   border-top: none;
   transition: none;
   transform: none;
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
 }
 
 .honorItem:hover {
@@ -401,8 +361,7 @@
 .honorItem img {
   width: auto;
   height: 150px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-bottom: 10px;
   filter: none;
 }
@@ -422,7 +381,34 @@
 }
 
 .gridContainerInner .honorItem {
-  width: calc((100% - 20px) / 2); 
+  width: calc((100% - 20px) / 2);
+}
+
+@keyframes honores-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 900px) {
+  .certificacionesGrid {
+    flex-direction: row;
+    text-align: left;
+    gap: 80px;
+  }
+  .certificacionesLogos {
+    flex: 2;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .textoCertificaciones {
+    flex: 1;
+    text-align: left;
+  }
 }
 
 @media (min-width: 640px) {
@@ -433,23 +419,15 @@
     width: calc((100% - 30px) / 3);
   }
 }
+
 @media (min-width: 1024px) {
   .gridContainerInner {
     gap: 20px 20px;
   }
   .gridContainerInner .honorItem {
-    width: calc((100% - 100px) / 6); 
+    width: calc((100% - 100px) / 6);
   }
 }
-@keyframes honores-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}/*# sourceMappingURL=SobreNosotros.module.css.map */
-
 
 @media (max-width: 1024px) {
   .bannerSobre h1 {
@@ -500,24 +478,6 @@
     line-height: 1.6rem;
   }
 
-}
-
-  @media (max-width: 768px) {
-  .bannerSobre {
-    height: 60vh;
-    background-position: 50% 30%;
-    padding: 0 1rem;
-  }
-
-  .bannerSobre h1 {
-    font-size: 2.2rem;
-  }
-
-  .bannerSobre p {
-    font-size: 1rem;
-    line-height: 1.6rem;
-  }
-
   .perfilAngela {
     padding: 40px 15px;
   }
@@ -532,16 +492,20 @@
 
   .perfilAngela .botonZoom {
     padding: 15px 25px;
-    font-size: 1rem; 
-    width: 100%; 
+    font-size: 1rem;
+    width: 100%;
     max-width: 100%;
-    white-space: normal; 
-    line-height: 1.3; 
+    white-space: normal;
+    line-height: 1.3;
   }
 
   .visionMisionUnica .textos {
     flex-direction: column;
     text-align: center;
+  }
+
+  .visionMisionUnica .textoBloque {
+    margin-bottom: 20px;
   }
 
   .visionMisionUnica h2 {
@@ -551,7 +515,34 @@
   .visionMisionUnica p {
     font-size: 1rem;
   }
+
+  .certificacionesSection h2,
+  .premiosHonoresSection h2 {
+    font-size: 2.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .certificacionesSection .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certificacionesSection .iconos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .certificacionesSection .iconos img {
+    margin: 10px;
+  }
+
+  .certificacionesSection .textoCertificaciones {
+    text-align: center;
+    margin-top: 20px;
+  }
 }
+
 @media (max-width: 480px) {
   .bannerSobre {
     height: 50vh;
@@ -578,18 +569,20 @@
   .perfilAngela .botonZoom {
     width: 100%;
     max-width: 280px;
-    padding: 12px 15px; 
-    font-size: 0.9rem; 
+    padding: 12px 15px;
+    font-size: 0.9rem;
     white-space: normal;
-    line-height: 1.4; 
+    line-height: 1.4;
     text-align: center;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
+  }
 
   .certificacionesSection h2,
   .premiosHonoresSection h2 {
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1.8rem;
+    padding: 1rem 0.5rem;
+    word-wrap: break-word;
   }
 
   .honorItem img {
@@ -603,5 +596,4 @@
   .honorItem p {
     font-size: 0.7rem;
   }
-}
 }
