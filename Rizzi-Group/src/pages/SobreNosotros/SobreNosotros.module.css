@@ -174,8 +174,10 @@
 .certificacionesSection h2 {
   font-size: 3.4rem;
   color: #00123a;
-  padding: 2rem;
+  padding: 2rem 1rem;
   border-bottom: solid 2px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .certificacionesSection .container {
@@ -242,10 +244,11 @@
   background-color: #f8f8f8;
   text-align: center;
 }
-
 .containerCertificaciones {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .certificacionesGrid {
@@ -542,7 +545,6 @@
     margin-top: 20px;
   }
 }
-
 @media (max-width: 480px) {
   .bannerSobre {
     height: 50vh;
@@ -578,11 +580,32 @@
     margin: 0 auto;
   }
 
+  .certificacionesSection {
+    padding: 20px 10px;
+    overflow-x: hidden;
+  }
+
+  .containerCertificaciones {
+    padding: 0 0.5rem;
+  }
+
   .certificacionesSection h2,
   .premiosHonoresSection h2 {
-    font-size: 1.8rem;
-    padding: 1rem 0.5rem;
+    font-size: 1.6rem;
+    padding: 0.8rem 0.3rem;
     word-wrap: break-word;
+    border-bottom-width: 1px;
+    margin: 0 0 1rem 0;
+  }
+
+  .certificacionesLogos {
+    padding: 0 0.5rem;
+    grid-template-columns: repeat(2, 1fr); /* AÑADIDO: fuerza 2 columnas */
+    gap: 15px; /* AÑADIDO: reduce el gap */
+  }
+
+  .certificacionesLogos img {
+    max-width: 100px; /* AÑADIDO: reduce tamaño máximo */
   }
 
   .honorItem img {
