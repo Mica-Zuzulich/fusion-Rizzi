@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd Rizzi-Group && npm install && npm run build",
-  "outputDirectory": "Rizzi-Group/dist",
-  "installCommand": "cd Rizzi-Group && npm install"
-}
