@@ -1,191 +1,94 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .contacto {
-  text-align: center;
-  padding: 4rem 2rem;
+  width: 100%;
   background-color: #f2f4f4;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.contacto h1 {
+  font-size: 2rem;
+  color: #0a1944;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contacto > .container > p {
+  font-size: 1rem;
+  color: #0a1944;
+  margin-bottom: 2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   width: 100%;
 }
 
-.contacto .contactoMargenes {
-  width: 94%;
-  margin: auto;
-  max-width: 1200px; /* Agregado límite máximo */
+.info {
+  width: 100%;
+  text-align: center;
 }
 
-.contacto h2 {
-  text-align: left;
-  font-size: 4rem;
+.info h2 {
+  font-size: 1.8rem;
   color: #0a1944;
+  margin-bottom: 1rem;
 }
 
-.contacto button {
-  background: #141e2e;
-  color: white;
-  border: none;
-  padding: 1.2rem;
-  border-radius: 50px;
-  cursor: pointer;
-  width: 140px;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.contacto button:hover {
-  opacity: 0.9;
-  background-color: burlywood;
-}
-
-.contacto h3 {
-  display: inline-block;
-  padding: 0.2rem 0;
-  margin-top: 1rem;
-  font-size: 1.7rem;
+.info p {
+  font-size: 1rem;
   color: #0a1944;
-  border-bottom: solid 3px #c59668;
-}
-
-.contacto .certi {
-  margin-top: 10px;
-  font-size: 1.7rem;
-  margin-bottom: 6rem;
-}
-
-.contacto .formContainer {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  gap: 2rem; /* Agregado espacio entre elementos */
-}
-
-.contacto .info {
-  flex: 1;
-  min-width: 300px; /* Cambiado de width: 50% */
-  max-width: 500px; /* Agregado */
-  padding-left: 2rem;
-  border-radius: 10px;
-  text-align: left;
-}
-
-.contacto .info .logo {
-  border-radius: 6px;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  overflow: hidden;
-  min-width: 200px;
-  margin-left: -2rem;
-}
-
-.contacto .info .logo img {
-  width: 50%;
-}
-
-.contacto .datos {
-  display: grid;
-  align-items: end;
-}
-
-.contacto .datos p {
-  font-size: 1.2rem;
-  padding-top: 10px;
-}
-
-.contacto p {
+  margin: 0.5rem 0;
   font-weight: 500;
 }
 
-/* --- Responsive (Tablet) --- */
-@media (max-width: 992px) {
-  .contacto .formContainer {
-    flex-direction: column;
-    align-items: center;
+@media (min-width: 769px) {
+  .container {
+    padding: 4rem 2rem;
   }
-  
-  .contacto .info {
-    max-width: 100%;
-    width: 100%;
-  }
-}
 
-/* --- Responsive (Mobile) --- */
-@media (max-width: 768px) {
-  .contacto {
-    padding: 3rem 1rem;
-  }
-  
   .contacto h1 {
-    font-size: 2rem;
-  }
-  
-  .contacto > p {
-    font-size: 1rem;
-    padding: 0 1rem;
+    font-size: 2.5rem;
   }
 
-  .contacto h2 {
-    font-size: 2rem;
-    text-align: center;
+  .contacto > .container > p {
+    font-size: 1.2rem;
   }
 
-  .contacto h3 {
-    font-size: 1.4rem;
-    margin-top: 0.5rem;
+  .formContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
   }
 
-  .contacto .certi {
-    font-size: 1.4rem;
-    margin-bottom: 3rem;
+  .info {
+    flex: 1;
+    text-align: left;
   }
 
-  .contacto .formContainer {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  .info h2 {
+    font-size: 2.5rem;
   }
 
-  .contacto .info {
-    width: 100%;
-    padding-left: 0;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .contacto .info .logo {
-    justify-content: center;
-    margin: 0 auto;
-    min-width: unset;
-  }
-
-  .contacto .info .logo img {
-    width: 60%;
-    max-width: 150px;
-  }
-
-  .contacto .datos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contacto .datos p,
-  .contacto p {
-    font-size: 1rem;
-    padding-top: 5px;
-  }
-
-  .contacto button {
-    width: 100%;
-    max-width: 200px;
+  .info p {
     font-size: 1.1rem;
-    padding: 1rem;
   }
 }
