@@ -1,10 +1,8 @@
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useTranslation } from "react-i18next";
 import styles from "./ContactoForm.module.css";
 
 export default function ContactoForm() {
-  const { t } = useTranslation();
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [mensaje, setMensaje] = useState("");
@@ -14,9 +12,9 @@ export default function ContactoForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!captchaToken) {
-      setEstado(t("contacto.estado.captcha_error"));
+      setEstado("Por favor, verificá que no sos un robot.");
       return;
     }
 
@@ -24,7 +22,7 @@ export default function ContactoForm() {
     setEstado("");
 
     try {
-      const res = await fetch('/api/send-email', {
+      const res = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nombre, email, mensaje, captchaToken }),
@@ -33,66 +31,62 @@ export default function ContactoForm() {
       const data = await res.json();
 
       if (data.success) {
-        setEstado(t("contacto.estado.success"));
+        setEstado("Mensaje enviado correctamente. Gracias por contactarnos.");
         setNombre("");
         setEmail("");
         setMensaje("");
         setCaptchaToken("");
       } else {
-        setEstado(t("contacto.estado.fail"));
+        setEstado("Ocurrió un error al enviar el mensaje.");
       }
     } catch (error) {
       console.error("Error:", error);
-      setEstado(t("contacto.estado.connect_error"));
+      setEstado("No se pudo conectar con el servidor.");
     }
 
     setEnviando(false);
   };
 
-  const handleCaptchaChange = (token) => {
-    setCaptchaToken(token);
-  };
-
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <label htmlFor="nombre">{t("contacto.label_nombre")}</label>
+      <label htmlFor="nombre">Nombre</label>
       <input
         id="nombre"
         value={nombre}
         onChange={(e) => setNombre(e.target.value)}
         required
-        placeholder={t("contacto.placeholder_nombre")}
+        placeholder="Tu nombre"
       />
 
-      <label htmlFor="email">{t("contacto.label_email")}</label>
+      <label htmlFor="email">Email</label>
       <input
         id="email"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        placeholder={t("contacto.placeholder_email")}
+        placeholder="Tu email"
       />
 
-      <label htmlFor="mensaje">{t("contacto.label_mensaje")}</label>
+      <label htmlFor="mensaje">Mensaje</label>
       <textarea
         id="mensaje"
         value={mensaje}
         onChange={(e) => setMensaje(e.target.value)}
         required
-        placeholder={t("contacto.placeholder_mensaje")}
+        placeholder="Escribí tu mensaje"
         rows={12}
       />
 
       <div className={styles.captchaContainer}>
         <ReCAPTCHA
           sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-          onChange={handleCaptchaChange}
+          onChange={(token) => setCaptchaToken(token)}
         />
       </div>
 
       <button type="submit" disabled={enviando || !captchaToken}>
-        {enviando ? t("contacto.boton_enviando") : t("contacto.boton_enviar")}
+        {enviando ? "Enviando..." : "Enviar mensaje"}
       </button>
 
       {estado && <p className={styles.estadoMensaje}>{estado}</p>}
