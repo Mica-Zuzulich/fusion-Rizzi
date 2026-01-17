@@ -29,3 +29,11 @@ dist-ssr
 config.php
 .vercel
 .env*.local
+
+# Environment variables
+.env
+.env.local
+.env*.local
+
+# Vercel
+.vercel

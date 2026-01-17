@@ -1,89 +1,186 @@
+/* IMPORTANTE: padding-top para que no lo tape el navbar */
 .contacto {
-  padding: 60px 5%;
-  background-color: #fff;
-  min-height: 80vh;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e8e8e8 0%, #ffffff 100%);
+  padding-top: 120px;
+  padding-bottom: 4rem;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .tituloPrincipal {
-  font-size: 40px;
-  color: #0d2142;
-  font-weight: 800;
-  margin-bottom: 30px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0a2240;
+  margin: 0 0 1rem 0;
 }
 
 .mainGrid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr; /* Dos columnas: formulario más ancho */
-  gap: 80px;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+/* Columna izquierda - Formulario */
+.formCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .bajada {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 25px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #1e3a5f;
+  margin: 0;
 }
 
-/* Info de la derecha */
+.formWrapper {
+  width: 100%;
+}
+
+/* Columna derecha - Información */
 .infoCol {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.logoContainer {
+  margin-bottom: 1rem;
 }
 
 .logo {
-  max-width: 220px;
+  width: 280px;
   height: auto;
-  margin-bottom: 10px;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .nombre {
-  font-size: 24px;
-  color: #0d2142;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a2240;
   margin: 0;
-  border-bottom: 2px solid #0d2142; /* Línea debajo del nombre */
-  display: inline-block;
-  padding-bottom: 5px;
 }
 
-.cargo, .certificaciones {
-  margin: 5px 0;
-  color: #333;
-  font-weight: 500;
+.cargo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0a2240;
+  margin: 0;
+}
+
+.certificaciones {
+  font-size: 1.125rem;
+  color: #0a2240;
+  margin: 0;
 }
 
 .datosContacto {
-  margin-top: 20px;
-  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.datosContacto p {
+  font-size: 1rem;
+  color: #1e3a5f;
+  margin: 0;
   line-height: 1.6;
 }
 
+.telefono,
+.email {
+  color: #0a2240;
+}
+
+/* Iconos de redes sociales */
 .socialIcons {
   display: flex;
-  gap: 12px;
-  margin-top: 10px;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .iconCircle {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #0d2142;
+  width: 45px;
+  height: 45px;
+  background-color: #0a2240;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  color: #0d2142;
+  color: white;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-/* Responsivo para celulares */
-@media (max-width: 768px) {
+.iconCircle:hover {
+  background-color: #c89968;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .contacto {
+    padding-top: 100px;
+  }
+
+  .tituloPrincipal {
+    font-size: 2.5rem;
+  }
+
   .mainGrid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 4rem;
+  }
+
+  .infoCol {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .contacto {
+    padding-top: 90px;
+    padding-bottom: 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .tituloPrincipal {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 220px;
+  }
+
+  .nombre {
+    font-size: 1.75rem;
+  }
+
+  .iconCircle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
   }
 }

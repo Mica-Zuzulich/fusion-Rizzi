@@ -2,7 +2,8 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Logo_Rizzi_Color_Header from "../Imagenes/Logos/Logo_Rizzi_Color_Header.png";
-import LanguageButton from "../LanguageButton"; // Botón para cambiar idioma
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Navbar() {
   const [menuAbierto, setMenuAbierto] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <div className={styles.navbar}>
-        {/* Logo clickeable */}
+        {/* Logo */}
         <Link to="/" className={styles.logo}>
           <img
             src={Logo_Rizzi_Color_Header}
@@ -23,15 +24,13 @@ export default function Navbar() {
           />
         </Link>
 
+        {/* Botón hamburguesa */}
         <button className={styles.menuBtn} onClick={toggleMenu}>
           ☰
         </button>
 
-        <nav
-          className={`${styles.nav} ${
-            menuAbierto ? styles.navVisible : ""
-          }`}
-        >
+        {/* Navegación */}
+        <nav className={`${styles.nav} ${menuAbierto ? styles.navVisible : ""}`}>
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -41,7 +40,6 @@ export default function Navbar() {
           >
             Home
           </NavLink>
-
           <NavLink
             to="/proyectos"
             className={({ isActive }) =>
@@ -51,7 +49,6 @@ export default function Navbar() {
           >
             Proyectos
           </NavLink>
-
           <NavLink
             to="/sobre-nosotros"
             className={({ isActive }) =>
@@ -61,7 +58,6 @@ export default function Navbar() {
           >
             Sobre Nosotros
           </NavLink>
-
           <NavLink
             to="/contacto"
             className={({ isActive }) =>
@@ -71,9 +67,23 @@ export default function Navbar() {
           >
             Contacto
           </NavLink>
-
-          <LanguageButton />
         </nav>
+
+        {/* Redes Sociales */}
+        <div className={styles.redes}>
+          <a href="#" className={styles.iconoRed} aria-label="Facebook">
+            <FaFacebook />
+          </a>
+          <a href="#" className={styles.iconoRed} aria-label="Instagram">
+            <FaInstagram />
+          </a>
+          <a href="#" className={styles.iconoRed} aria-label="Twitter">
+            <FaXTwitter />
+          </a>
+          <a href="#" className={styles.iconoRed} aria-label="YouTube">
+            <FaYoutube />
+          </a>
+        </div>
       </div>
     </header>
   );

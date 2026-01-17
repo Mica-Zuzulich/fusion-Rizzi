@@ -1,14 +1,14 @@
 import ContactoForm from '../../components/ContactoForm/ContactoForm';
 import styles from './Contacto.module.css';
-// Importamos el logo con color
 import Logo_Rizzi_Color_Header from "../../components/Imagenes/Logos/Logo_Rizzi_Color_Header.png";
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Contacto() {
   return (
     <section className={styles.contacto}>
       <div className={styles.container}>
-        <h1 className={styles.tituloPrincipal}>Contactános</h1>
-        
+        <h1 className={styles.tituloPrincipal}>Contáctanos</h1>
         <div className={styles.mainGrid}>
           {/* Columna Izquierda: Introducción y Formulario */}
           <div className={styles.formCol}>
@@ -23,7 +23,6 @@ export default function Contacto() {
           {/* Columna Derecha: Logo e Info de Angela */}
           <div className={styles.infoCol}>
             <div className={styles.logoContainer}>
-              {/* CORRECCIÓN: Usamos el nombre exacto de la importación */}
               <img src={Logo_Rizzi_Color_Header} alt="Rizzi Group Logo" className={styles.logo} />
             </div>
             
@@ -40,10 +39,18 @@ export default function Contacto() {
             </div>
 
             <div className={styles.socialIcons}>
-               <div className={styles.iconCircle}>f</div>
-               <div className={styles.iconCircle}>ig</div>
-               <div className={styles.iconCircle}>x</div>
-               <div className={styles.iconCircle}>yt</div>
+              <a href="#" className={styles.iconCircle} aria-label="Facebook">
+                <FaFacebook />
+              </a>
+              <a href="#" className={styles.iconCircle} aria-label="Instagram">
+                <FaInstagram />
+              </a>
+              <a href="#" className={styles.iconCircle} aria-label="Twitter">
+                <FaXTwitter />
+              </a>
+              <a href="#" className={styles.iconCircle} aria-label="YouTube">
+                <FaYoutube />
+              </a>
             </div>
           </div>
         </div>
