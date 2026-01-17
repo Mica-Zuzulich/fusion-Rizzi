@@ -29,13 +29,18 @@ export default async function handler(req, res) {
     }
 
     // Verificar reCAPTCHA
-    const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`
-    });
-  
-    const recaptchaData = await recaptchaResponse.json();
+   const recaptchaResponse = await fetch(
+  'https://www.google.com/recaptcha/api/siteverify',
+  {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}&remoteip=${req.headers['x-forwarded-for'] || ''}`
+  }
+);
+
+const recaptchaData = await recaptchaResponse.json();
+console.log("recaptchaData:", recaptchaData);
+
     console.log("recaptchaData:", recaptchaData);
     if (!recaptchaData.success) {
       return res.status(400).json({ 
