@@ -1,5 +1,4 @@
-// api/send-email.js
-// Serverless Function para Vercel
+
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
@@ -35,9 +34,9 @@ export default async function handler(req, res) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`
     });
-
+  
     const recaptchaData = await recaptchaResponse.json();
-
+    console.log("recaptchaData:", recaptchaData);
     if (!recaptchaData.success) {
       return res.status(400).json({ 
         success: false, 
