@@ -37,10 +37,7 @@
     "razon4": "Exceptional service and personalized attention, understanding your needs abroad.",
     "alt_icono": "Tick Icon"
   },
-  "intro": {
-    "alt_imagen": "Modern house",
-    "titulo_html": "The most <span>flexible</span> <br />way to invest.",
-    "descripcion": "With over 25 years of experience, Rizzi Group presents an innovative proposal that revolutionizes the way to acquire property in the United States. With a much more dynamic and flexible scheme, designed especially for Latin American families, the door opens to a global lifestyle, with benefits that go beyond the traditional real estate purchase. Rizzi Group invites you to Live the experience!",
-    "boton": "Contact Us"
-  }
+  "introProyectos": {
+  "titulo": "Project Overview"
+}
 }

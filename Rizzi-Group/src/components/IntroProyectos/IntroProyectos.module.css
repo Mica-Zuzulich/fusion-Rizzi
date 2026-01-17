@@ -1,71 +1,94 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 * {
   font-family: "Montserrat", sans-serif;
 }
 
+/* ===== MOBILE FIRST ===== */
 .introProyectos {
   background-color: #f7f7f7;
-  padding: 0;
   display: flex;
   justify-content: center;
+}
 
-}
-.introProyectos .contenedor {
-  display: flex;
-  align-items: center;
+.contenedor {
   width: 90%;
-  gap: 50px;
-  height: auto;
-  padding: 5em 0;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 3em 0;
 }
-.introProyectos .imagen {
-  flex: 1;
-  background-color: #ececec;
-  border-radius: 25px;
-  display: grid;
-  place-content: center;
-  height: 90%;
-}
-.introProyectos .casaImg {
-  width: 100%;
-  border-radius: 25px;
-}
-.introProyectos .texto {
-  height: 90%;
-  flex: 1;
+
+.texto {
+  text-align: center;
   color: #00123a;
 }
-.introProyectos .texto h2 {
-  font-size: 3.5rem;
+
+.texto h2 {
+  font-size: 2rem;
   font-weight: 700;
-  color: #00123a;
-  margin: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
-.introProyectos .texto span {
+
+.texto span {
   color: #c2865a;
 }
-.introProyectos .texto p {
-  margin-top: 20px;
-  font-size: 1.25em;
-  font-weight: 500;
-  line-height: 1.5;
-  margin-bottom: 3rem;
+
+.texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
-.introProyectos .boton {
-  margin-top: 25px;
+
+.boton {
+  display: inline-block;
   background-color: #00123a;
   color: #fff;
-  font-size: 1.3rem;
-  font-weight: 500;
-  padding: 20px 30px;
-  border: none;
+  font-size: 1.1rem;
+  padding: 14px 28px;
   border-radius: 30px;
+  text-decoration: none;
   font-weight: 600;
-  cursor: pointer;
   transition: background 0.3s;
 }
-.introProyectos .boton:hover {
+
+.boton:hover {
   background-color: #c2865a;
-}/*# sourceMappingURL=IntroProyectos.module.css.map */
+}
+
+.imagen {
+  background-color: #ececec;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.casaImg {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* ===== TABLET Y DESKTOP ===== */
+@media (min-width: 768px) {
+  .contenedor {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .texto {
+    text-align: left;
+    flex: 1;
+  }
+
+  .texto h2 {
+    font-size: 3.2rem;
+  }
+
+  .texto p {
+    font-size: 1.2rem;
+  }
+
+  .imagen {
+    flex: 1;
+  }
+}

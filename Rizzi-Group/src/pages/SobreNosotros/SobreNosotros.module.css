@@ -600,12 +600,12 @@
 
   .certificacionesLogos {
     padding: 0 0.5rem;
-    grid-template-columns: repeat(2, 1fr); /* AÑADIDO: fuerza 2 columnas */
-    gap: 15px; /* AÑADIDO: reduce el gap */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; 
   }
 
   .certificacionesLogos img {
-    max-width: 100px; /* AÑADIDO: reduce tamaño máximo */
+    max-width: 100px; 
   }
 
   .honorItem img {

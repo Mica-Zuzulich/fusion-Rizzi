@@ -38,10 +38,8 @@
     "razon4": "Servicio excepcional y trato personalizado, entendiendo tus necesidades en el extranjero.",
     "alt_icono": "Icono de Tick"
   },
-  "intro": {
-    "alt_imagen": "Casa moderna",
-    "titulo_html": "La forma más <span>flexible</span> <br />de invertir.",
-    "descripcion": "Con sus más de 25 años de experiencia, Rizzi Group presenta una propuesta innovadora que revoluciona la forma de acceder a una propiedad en Estados Unidos. Con un esquema mucho más dinámico y flexible, pensado especialmente para las familias latinoamericanas, se abre la puerta a un estilo de vida global, con beneficios que van más allá de la compra tradicional de bienes raíces. Rizzi Group te invita: ¡Vive la experiencia!",
-    "boton": "Contáctanos"
-  }
+  "introProyectos": {
+  "titulo": "Introducción a Proyectos"
+}
+
 }
